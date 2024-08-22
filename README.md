@@ -1,3 +1,33 @@
+# Weather Whiz 🌦️
+
+**Weather Whiz** is a sleek and intuitive weather application built with React. It pulls real-time weather data using the OpenWeather API and features a dynamic, animated cloud background. The app also includes weather icons that change based on the current weather conditions, such as sunny, rainy, or snowy.
+
+## 🌟 Features
+
+- **Real-time Weather Data**: Get up-to-date weather information for any location using the OpenWeather API.
+- **Dynamic Background**: The app features an animated cloud background that enhances the user experience.
+- **Weather Icons**: Icons change according to the current weather conditions, offering a visually engaging experience.
+- **Responsive Design**: Optimized for all devices, providing a seamless experience whether on desktop or mobile.
+
+## 🚀 Demo
+
+Check out the live demo of the app here: [Weather Whiz on Netlify]((https://theweatherwhiz.netlify.app))
+
+## 🛠️ Technologies Used
+
+- **React**: A JavaScript library for building user interfaces.
+- **OpenWeather API**: Provides real-time weather data.
+- **CSS & Animation**: For styling and creating dynamic backgrounds.
+- **Netlify**: Deployed and hosted on Netlify.
+
+## 🧰 Installation and Setup Instructions
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone [https://github.com/AngeliqueLewis/Path2TechWeatherApp2]
+   cd weather-whiz
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
