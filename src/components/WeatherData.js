@@ -3,6 +3,7 @@ import { getCurrentTime } from './utils/timeUtils';
 import "./WeatherData.css"
 
 
+
 export default function WeatherData({ list }) {
   const item = list[0]; // Get the first item from the list
 
@@ -18,6 +19,20 @@ const CurrentTime = (timestamp) => {
   return `${("0" + hours).slice(-2)}:${minutes}${ampm}`; // Format as hh:mmAM/PM
 }
 
+// Weather icon changes with weather
+const getWeatherIcon = (weather) => {
+  const iconMap = {
+    'Clear': 'icons/01d.png', // Example: Clear weather
+    'Clouds': 'icons/02d.png', // Example: Cloudy weather
+    'Rain': 'icons/09d.png', // Example: Rainy weather
+    'Snow': 'icons/13d.png', // Example: Snowy weather
+    'Drizzle': 'icons/10d.png', // Example: Drizzle
+    'Thunderstorm': 'icons/11d.png', // Example: Thunderstorm
+    // Add more mappings as needed
+  };
+  return iconMap[weather] || 'icons/01d.png'; // Default icon if weather condition not found
+};
+
 // Example usage:
 
   return (
@@ -26,7 +41,11 @@ const CurrentTime = (timestamp) => {
         <div key={item.day} className="weather-card">
           <h1>Weather Whiz</h1>
           <div className = 'sun'>
-            <img alt="weather" className="weather-icon" src="icons/02d.png"/>
+            <img 
+            alt="weather" 
+            className="weather-icon" 
+            src={getWeatherIcon(item.weather[0].main)}
+            />
           </div>
           <h2>Current Temperature: {Math.round(item.main.temp)}°</h2>
           <p> Current Time: {getCurrentTime()}</p>
